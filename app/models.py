@@ -22,3 +22,21 @@ class Blogs(db.Model):
     user_id = db.Column(db.Integer, db.ForeignKey("users.id",ondelete='CASCADE'), nullable=False)
     comments = db.relationship('Comments', backref='title', lazy='dynamic')
 
+    def save_blog(self):
+        db.session.add(self)
+        db.session.commit()
+
+    def deleteblog(self):
+        db.session.delete(self)
+        db.session.commit() 
+
+    @classmethod
+    def get_blogs(cls):
+        blog = Blogs.query.all()
+        return blog
+
+
+    def __repr__(self):
+        return f"Blogs {self.blog}','{self.date}')"     
+
+
