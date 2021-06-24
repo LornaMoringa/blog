@@ -111,3 +111,12 @@ class Comments(db.Model):
     def __repr__(self):
         return f"Comments('{self.comment}', '{self.date_posted}')"
 
+class Subscriber(db.Model):
+    __tablename__ = 'subscriber'
+
+    id = db.Column(db.Integer,primary_key = True)
+    username = db.Column(db.String(255))
+    email = db.Column(db.String(255),unique = True,index = True)
+
+    def __repr__(self):
+        return f'Subscriber {self.username}'
