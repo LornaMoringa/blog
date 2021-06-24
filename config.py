@@ -21,7 +21,7 @@ class ProdConfig(Config):
     SQLALCHEMY_DATABASE_URI = os.environ.get("HEROKU_POSTGRESQL_GREEN_URL")
 
 class TestConfig(Config):
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:kipkirui@localhost/blogs_test'
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:Access@localhost/blogs_test'
 
 class DevConfig(Config):
     SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:Access@localhost/blogs'

@@ -1,4 +1,4 @@
-Hello {{subs.username}}
+Hello {{user.username}}
 Welcome to Lornas Blogs
 
 ENJOY
