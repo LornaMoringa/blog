@@ -1,0 +1,4 @@
+Hello {{subs.username}}
+Welcome to Lornas Blogs
+
+ENJOY
